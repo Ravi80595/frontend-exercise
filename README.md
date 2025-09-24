@@ -1,27 +1,139 @@
-# Frontend Coding Exercise – Memory Game
+# Memory Game 🧠
 
-## Objective
-Build a memory game using **React**. The goal is to demonstrate your ability to design and structure a small application, manage state, and deliver clean, maintainable code.
+A fun and interactive **Memory Game** built with **React**, **TypeScript**, and **Tailwind CSS**.  
+This project demonstrates **React state management**, component design, routing, and test coverage using **Vitest**.
 
-This is a React project using **TypeScript** and **Tailwind CSS** for styling. You are free to use any tools, libraries, or approaches you prefer. Please use the packages already installed in the project first, and install anything else you need.
+---
 
-## Requirements
-- Create a React app with three pages:
-  1. **Start Page** – where the player can enter their name and begin the game.
-  2. **Game Page** – where the memory game is played.
-     - The player's name and a timer should be visible.
-     - The game board should consist of a grid of tiles.
-     - The game should end once all pairs have been found.
-  3. **End Page** – shown when the game is finished, displaying the player's name and result.
-- Tiles:
-  - **Back side**: use `growy_logo.svg` from the public folder.
-  - **Front side**: use images from the provided list in the public folder (selection is up to you).
-- Support different board sizes (e.g., 2x2, 6x6, 4x5).
-- Implement one additional minor feature of your choice to enhance the game experience.
-- Write unit tests for at least one component or page of your choice.
-- The project should pass **eslint** and **prettier** checks. You can run these checks using the scripts in [package.json](./package.json).
+## Table of Contents
 
-## Submission Instructions
-1. Fork this repository to your own GitHub account.
-2. Implement your solution in the forked repository.
-3. Share the link to your fork with us when you are finished. 
+- [Features](#features)
+- [Demo](#demo)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Running the Project](#running-the-project)
+- [Running Tests](#running-tests)
+- [Linting & Formatting](#linting--formatting)
+- [Build](#build)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## Features
+
+- **Start Page**:
+  - Enter player name.
+  - Select board size: 2x2, 4x4, 6x6, 4x5.
+- **Game Page**:
+  - Grid of tiles with front/back images.
+  - Flippable cards with smooth animation.
+  - Timer display to track game duration.
+  - Tracks matched pairs and ends game when all are found.
+- **End Page**:
+  - Displays player's name and result.
+  - Optional replay or restart.
+- **Unit Tests**:
+  - Vitest and Testing Library for component testing.
+- **Responsive UI**:
+  - Fully responsive using Tailwind CSS.
+
+---
+
+## Demo
+
+> Replace these with actual screenshots or GIFs  
+
+**Start Page:**  
+![Start Page](./public/screenshots/start-page.png)
+
+**Game Page:**  
+![Game Page](./public/screenshots/game-page.png)
+
+**End Page:**  
+![End Page](./public/screenshots/end-page.png)
+
+---
+
+## Tech Stack
+
+- **Frontend:** React 18 + TypeScript  
+- **Styling:** Tailwind CSS  
+- **Routing:** React Router DOM  
+- **Testing:** Vitest + Testing Library  
+- **Linting & Formatting:** ESLint + Prettier  
+- **Build Tool:** Vite  
+
+---
+
+## Project Structure
+
+frontend-exercise/
+│
+├─ public/ # Static assets (images, logos, screenshots)
+│
+├─ src/
+│ ├─ assets/ # Images and SVGs
+│ ├─ components/ # Reusable UI components (Card, Timer, Modal)
+│ ├─ context/ # GameContext for global state management
+│ ├─ hooks/ # Custom React hooks
+│ ├─ pages/ # Start, Game, and End pages
+│ ├─ App.tsx # Main App component with routes
+│ └─ main.tsx # Entry point
+│
+├─ tests/ # Optional folder for test files
+├─ package.json
+├─ tailwind.config.js
+├─ tsconfig.json
+└─ vite.config.ts
+
+
+Running the Project
+
+Start the development server:
+
+npm run dev
+# or
+yarn dev
+
+
+Open http://localhost:5173
+ in your browser.
+
+You should see the Start Page.
+
+Running Tests
+
+Run all tests using Vitest:
+
+npm run test
+# or
+yarn test
+
+
+Tests are written using Vitest + Testing Library.
+
+Linting & Formatting
+
+Ensure consistent code style and avoid errors:
+
+npm run lint
+npm run format
+# or
+yarn lint
+yarn format
+
+Build
+
+Build the project for production:
+
+npm run build
+# or
+yarn build
+
+
+Production-ready files will be in the dist/ folder.
+
+Can be served using any static server.
